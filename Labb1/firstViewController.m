@@ -22,6 +22,7 @@
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     [self darkModeChecker];
@@ -51,19 +52,20 @@
 }
 
 - (IBAction)guessButton:(id)sender {
+
     
-    if([self.guessField.text intValue] > self.random){
-        self.infoLabel.text = @"Lower!";
+        if([self.guessField.text intValue] > self.random){
+             self.infoLabel.text = @"Lower!";
+             
+         }else if([self.guessField.text intValue] < self.random){
+             self.infoLabel.text = @"Higher!";
+             
+         }else {
+             self.infoLabel.text = @"Congratz, you won!";
+             
+         }
+             NSLog(@"%i", self.random);
         
-    }else if([self.guessField.text intValue] < self.random){
-        self.infoLabel.text = @"Higher!";
-        
-    }else {
-        self.infoLabel.text = @"Congratz, you won!";
-        
-    }
-    NSLog(@"%i", self.random);
-    
 }
 
 /*
