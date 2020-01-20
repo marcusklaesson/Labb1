@@ -20,10 +20,8 @@
 
 
 - (void)viewDidLoad {
-    firstViewController *firstView = [[firstViewController alloc] init];
-    [firstView darkModeChecker];
     [super viewDidLoad];
-    
+    [firstViewController darkModeChecker:self.view];
 }
 // Darkmode/Lightmode switch
 - (IBAction)darkMode:(id)sender {

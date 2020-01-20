@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface firstViewController : UIViewController
 
 - (IBAction)guessButton:(id)sender;
--(void)darkModeChecker;
++ (void)darkModeChecker:(UIView*)view;
 
 @end
 

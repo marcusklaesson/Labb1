@@ -7,6 +7,7 @@
 //
 
 #import "thirdViewController.h"
+#import "firstViewController.h"
 
 @interface thirdViewController ()
 
@@ -17,20 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self darkModeChecker];
+    [firstViewController darkModeChecker:self.view];
     
 }
--(void)darkModeChecker{
-    
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    BOOL darkMode = [settings boolForKey:@"darkModeEnabled"];
-    
-    if(darkMode){
-        self.view.backgroundColor = UIColor.blackColor;
-    }else {
-        self.view.backgroundColor = UIColor.whiteColor;
-    }
-    
+
     /*
      #pragma mark - Navigation
      
@@ -40,7 +31,7 @@
      // Pass the selected object to the new view controller.
      }
      */
-}
+
     @end
     
     

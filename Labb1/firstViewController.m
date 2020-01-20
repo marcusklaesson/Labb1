@@ -25,7 +25,8 @@
     
     [super viewDidLoad];
     
-    [self darkModeChecker];
+    
+    [firstViewController darkModeChecker:self.view];
     
     self.maxValue = 100;
     self.minValue = 1;
@@ -33,15 +34,15 @@
     [self randomGenerator];
     
 }
--(void)darkModeChecker{
++(void)darkModeChecker:(UIView*)view{
     
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     BOOL darkMode = [settings boolForKey:@"darkModeEnabled"];
     
     if(darkMode){
-        self.view.backgroundColor = UIColor.blackColor;
+        view.backgroundColor = UIColor.blackColor;
     }else {
-        self.view.backgroundColor = UIColor.whiteColor;
+        view.backgroundColor = UIColor.whiteColor;
     }
 }
 

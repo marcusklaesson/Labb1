@@ -19,21 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     [self darkModeChecker];
+     [firstViewController darkModeChecker:self.view];
     
 }
 
--(void)darkModeChecker{
-    
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    BOOL darkMode = [settings boolForKey:@"darkModeEnabled"];
-    
-    if(darkMode){
-        self.view.backgroundColor = UIColor.blackColor;
-    }else {
-        self.view.backgroundColor = UIColor.whiteColor;
-    }
-}
 
 /*
 #pragma mark - Navigation
